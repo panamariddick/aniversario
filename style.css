@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+}
+.container .imgBx{
+    position: relative;
+    width: 450px;
+    height: 100%;
+    background: url(images/mujercita.jpg);
+    background-size: cover;
+}
+.container .countdownBx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% - 450px);
+}
+.container .countdownBx h2{
+
+    text-align: center;
+    font-size: 1.5em;
+    color: #1FCECB;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+
+}
+.container .countdownBx h2 span{
+    font-size: 6em;
+    font-weight: 700;
+    font-style: initial;
+    color: #EE204D;
+}
+.container .countdownBx .countdown{
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container .countdownBx .countdown div{
+
+    position: relative;
+    width: 100px;
+    text-align: center;
+    color: #1FCECB;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin: 0 15px;
+    margin-top: -25px;
+}
+.container .countdownBx .countdown div:before{
+    content: 'text';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    color: #1FCECB;
+    font-size: 0.35em;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+
+.container .countdownBx .countdown div#day::before{
+
+    content: 'Dias';
+
+
+}
+.container .countdownBx .countdown div#hour::before{
+
+    content: 'Horas';
+    
+
+}
+.container .countdownBx .countdown div#minute::before{
+
+    content: 'Minutos';
+    
+
+}
+.container .countdownBx .countdown div#second::before{
+
+    content: 'Segundos';
+    
+
+}
+.container .countdownBx .countdown div#second,
+.container .countdownBx .countdown div#second::before{
+    color: #EE204D;
+}
+
+@media (max-width: 991px){
+    .container .imgBx{
+        display: none;
+    }
+    .container .countdownBx{
+        
+        width: 100%;
+    }
+}
+@media (max-width: 600px){
+    .container .countdownBx h2{
+        
+        font-size: 1.1em;
+        
+    }
+    .container .countdownBx .countdown{
+        
+        height: 100px;
+        
+    }
+    .container .countdownBx .countdown div{
+        
+        width: 80px;
+        font-size: 2em;
+        margin: 0;
+        margin-top: -25px;
+        
+    }
+}
